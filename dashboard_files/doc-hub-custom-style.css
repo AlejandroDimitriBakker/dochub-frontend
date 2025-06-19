@@ -30,7 +30,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     font-family: "OTTO Sans", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 0.89rem;
     color: #030303;
     margin: 0;
     padding: 0;
@@ -319,6 +319,7 @@ div.dt-container div.dt-layout-full > :only-child {
 
 .doc-hub-datatable {
     border: 1px solid #030303 !important;
+    font-size: 0.90rem;
 }
 
 .doc-hub-datable-header-left {
