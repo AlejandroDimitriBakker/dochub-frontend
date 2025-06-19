@@ -309,11 +309,20 @@ small {
 
 
 /* DATATABLE */
+table.dataTable {
+    width: auto;
+}
+
+div.dt-container div.dt-layout-full > :only-child {
+    margin-left: 0;
+}
+
 .doc-hub-datatable {
     border: 1px solid #030303 !important;
 }
 
 .doc-hub-datable-header-left {
+    white-space: nowrap;
     text-align: left !important;
 }
 
