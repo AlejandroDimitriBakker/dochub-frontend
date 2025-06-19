@@ -3,7 +3,6 @@ new DataTable('#doc-hub-erstmeldung-datatable', {
   info: false,
   ordering: true,
   paging: false,
-  searching: false,
   columnDefs: [
     {targets: [0, 1, 2], className: "dt-header-left dt-body-left doc-hub-datable-header-left"},
   ],
