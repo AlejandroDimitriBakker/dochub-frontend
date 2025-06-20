@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="index_files/doc-hub-bootstrap-custom-style.min.css">
+    <link rel="stylesheet" href="css/doc-hub-bootstrap-custom-style.min.css">
     <!-- Custom DocHub CSS -->
-    <link rel="stylesheet" href="index_files/doc-hub-custom-style.css">
-    <link rel="icon" type="image/x-icon" href="/dochub-frontend/icons/favicon.ico">
+    <link rel="stylesheet" href="css/doc-hub-custom-style.css">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
     <title>PSTTG-Login</title>
 </head>
 <body class="h-100">
@@ -18,7 +18,7 @@
 <div style="overflow:auto">
     <div class="login">
         <div class="container-fluid">
-            <form action="/dochub-frontend/home.html" method="get">
+            <form action="home.html" method="post" class="form-horizontal">
                 <div>
                     <button type="submit" data-mdb-button-init="" data-mdb-ripple-init="" class="btn btn-primary mb-4">
                         SingleSignOn AD-Azure Login
@@ -27,15 +27,14 @@
                 <div data-mdb-input-init="" class="form-outline mb-4">
                     <label class="form-label" for="pwd">BZST-Zertifikat-Passwort</label>
                     <input id="pwd" name="pwd" class="form-control psw-input" type="password" autofocus="">
-                    <div style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"
-                         data-lastpass-icon-root=""></div>
                 </div>
                 <div class="row mb-9">
                     <div>Für Nutzer hinterlegtes BZST-Zertifikat nutzen</div>
                     <div class="col-md-1 justify-content-right">Nein</div>
                     <div class="col-md-1 d-flex justify-content-left">
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked="checked">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" aria-checked="true"
+                                   checked="checked">
                         </div>
                     </div>
                     <div class="col-md-1 justify-content-right">Ja</div>
@@ -45,9 +44,5 @@
     </div>
 </div>
 <footer class="doc-hub-footer">© Doc Hub - OTTO Group</footer>
-
-
-<div style="position: absolute !important; top: 0px !important; left: 0px !important; height: 0px !important; width: 0px !important;"
-     data-lastpass-root=""></div>
 </body>
 </html>

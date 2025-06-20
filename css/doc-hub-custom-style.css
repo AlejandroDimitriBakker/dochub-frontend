@@ -264,16 +264,16 @@ small {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(180, 179, 219, 1)'/></svg>");
 }
 
-.form-control:focus {
-    border: 2px solid #030303;
-    box-shadow: none;
+.form-control:focus, .dt-input:focus, .dt-input:focus-visible, div.dt-container .dt-search input:focus, div.dt-container .dt-search input:focus-visible {
+    border: 2px solid #030303 !important;
+    box-shadow: none !important;
+    outline: none;
 }
 
-.form-control:hover {
+.form-control:hover, .dt-input:hover, div.dt-container .dt-search input:hover {
     border: 2px solid #949494;
     box-shadow: none;
 }
-
 
 .doc-hub-form-group {
     margin-bottom: 15px;
@@ -297,7 +297,7 @@ small {
 }
 
 .doc-hub-stammdaten {
-    max-width: 11rem;
+    max-width: 12rem;
 }
 
 .doc-hub-textarea-partners {
@@ -362,6 +362,8 @@ table.dataTable tbody tr.selected {
 }
 
 :root {
+    --bs-link-color: #dc001d;
+    --bs-link-hover-color: #dc001d;
     --dt-row-selected: #90e5d5 !important;
 }
 

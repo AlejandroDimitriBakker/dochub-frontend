@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JQuery CSS -->
-    <link rel="stylesheet" href="erstmeldung_files/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="erstmeldung_files/doc-hub-bootstrap-custom-style.min.css">
+    <link rel="stylesheet" href="css/doc-hub-bootstrap-custom-style.min.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="css/datatables.min.css">
     <!-- Custom DocHub CSS -->
-    <link rel="stylesheet" href="erstmeldung_files/doc-hub-custom-style.css">
-    <link rel="icon" type="image/x-icon" href="/dochub-frontend/icons/favicon.ico">
+    <link rel="stylesheet" href="css/doc-hub-custom-style.css">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
     <title>PSTTG-Erstmeldung</title>
 </head>
 <body>
@@ -23,13 +25,14 @@
                     <div></div>
                     <div>
                         <div class="doc-hub-user-profile-container">
-                            <a class="navbar-brand" href="/dochub-frontend/index.html"><img src="erstmeldung_files/logout.svg" alt="Logout"
-                                                                                            class="doc-hub-user-profile-icon"></a>
-                            <div class="doc-hub-user-profile-username"><a class="navbar-brand" href="/dochub-frontend/index.html">Logout</a>
+                            <a class="navbar-brand" href="index.html"><img src="icons/logout.svg"
+                                                                           alt="Logout"
+                                                                           class="doc-hub-user-profile-icon"></a>
+                            <div class="doc-hub-user-profile-username"><a class="navbar-brand" href="index.html">Logout</a>
                             </div>
                         </div>
                         <div class="doc-hub-user-profile-container">
-                            <img src="erstmeldung_files/user.svg" alt="User" class="doc-hub-user-profile-icon">
+                            <img src="icons/user.svg" alt="User" class="doc-hub-user-profile-icon">
                             <div class="doc-hub-user-profile-username">Patrick Voss SE-FC T</div>
                         </div>
                     </div>
@@ -40,27 +43,27 @@
                     <div class="collapse navbar-collapse doc-hub-nav-bar" id="navbarNav">
                         <ul class="nav justify-content-start nav-underline">
                             <li class="nav-item">
-                                <a class="nav-link doc-hub-nav-link" href="/dochub-frontend/home.html">Home</a>
+                                <a class="nav-link doc-hub-nav-link" href="home.html">Home</a>
                             </li>
                             <li class="doc-hub-nav-link">|</li>
                             <li class="nav-item">
-                                <a class="nav-link doc-hub-nav-link" href="/dochub-frontend/erstmeldung.html">Erstmeldung</a>
+                                <a class="nav-link doc-hub-nav-link" href="erstmeldung.html">Erstmeldung</a>
                             </li>
                             <li class="doc-hub-nav-link">|</li>
                             <li class="nav-item">
-                                <a class="nav-link doc-hub-nav-link" href="/dochub-frontend/korrekturmeldung.html">Korrekturmeldung</a>
+                                <a class="nav-link doc-hub-nav-link" href="korrekturmeldung.html">Korrekturmeldung</a>
                             </li>
                             <li class="doc-hub-nav-link">|</li>
                             <li class="nav-item">
-                                <a class="nav-link doc-hub-nav-link" href="/dochub-frontend/loschung.html">Löschung</a>
+                                <a class="nav-link doc-hub-nav-link" href="loschung.html">Löschung</a>
                             </li>
                             <li class="doc-hub-nav-link">|</li>
                             <li class="nav-item">
-                                <a class="nav-link doc-hub-nav-link" href="/dochub-frontend/neumeldung.html">Neumeldung</a>
+                                <a class="nav-link doc-hub-nav-link" href="neumeldung.html">Neumeldung</a>
                             </li>
                             <li class="doc-hub-nav-link">|</li>
                             <li class="nav-item">
-                                <a class="nav-link doc-hub-nav-link" href="/dochub-frontend/dashboard.html">Dashboard</a>
+                                <a class="nav-link doc-hub-nav-link" href="dashboard.html">Dashboard</a>
                             </li>
                         </ul>
                     </div>
@@ -72,14 +75,14 @@
                         <div class="doc-hub-main-content">
                             <div>
                                 <div class="col-md-12">
-                                    <form action="/action_page.php">
+                                    <form action="erstmeldung.html">
                                         <div class="form-group doc-hub-form-group">
                                             <label for="umsatzjahr">Umsatzjahr</label>
                                             <div class="input-group">
                                                 <input id="umsatzjahr" name="umsatzjahr" type="number"
                                                        class="form-control doc-hub-year-umsatzjahr" placeholder="YYYY" min="2015" max="2040"
                                                        step="1" autofocus>
-                                                <img src="erstmeldung_files/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
+                                                <img src="icons/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
                                             </div>
                                         </div>
                                         <div class="form-group doc-hub-form-group">
@@ -103,11 +106,13 @@
                                                     Meldung bestimmter Partner
                                                 </label>
                                                 <div>
-                        <textarea id="partners" name="partners" class="form-control doc-hub-textarea-partners" rows="7">08154711
+                                                    <label for="partners" class="form-label"></label>
+                                                    <textarea id="partners" name="partners" class="form-control doc-hub-textarea-partners"
+                                                              rows="7">08154711
 47111234
 12121341
                         </textarea>
-                                                    <label for="partners" class="form-label"></label>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -138,9 +143,9 @@
                                                                                    class="display doc-hub-datatable dataTable"
                                                                                    style="width: 100%;">
                                                                                 <colgroup>
-                                                                                    <col data-dt-column="0" style="width: 0px;">
-                                                                                    <col data-dt-column="1" style="width: 0px;">
-                                                                                    <col data-dt-column="2" style="width: 0px;">
+                                                                                    <col data-dt-column="0" style="width: 0;">
+                                                                                    <col data-dt-column="1" style="width: 0;">
+                                                                                    <col data-dt-column="2" style="width: 0;">
                                                                                 </colgroup>
                                                                                 <thead>
                                                                                 <tr>
@@ -201,11 +206,6 @@
                                                                             </table>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="dt-layout-row">
-                                                                        <div class="dt-layout-cell dt-layout-start"></div>
-                                                                        <div class="dt-layout-cell dt-layout-end"></div>
-                                                                    </div>
-                                                                    <div style="width: 100%; height: 0px;" class="dt-autosize"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -237,18 +237,13 @@
     </div>
 </div>
 <!-- JQuery JS -->
-<script type="text/javascript" src="erstmeldung_files/jquery-3.7.1.js"></script>
-<script type="text/javascript" src="erstmeldung_files/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
 <!-- Bootstrap JS -->
-<script type="text/javascript" src="erstmeldung_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- DataTables JS -->
-<script type="text/javascript" src="erstmeldung_files/datatables.min.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
 <!-- DocHub Custom JS -->
-<script type="text/javascript" src="erstmeldung_files/doc-hub-custom-javascript.js"></script>
-<!-- DataTables CSS -->
-<link rel="stylesheet" href="erstmeldung_files/datatables.min.css">
-
-<div style="position: absolute !important; top: 0px !important; left: 0px !important; height: 0px !important; width: 0px !important;"
-     data-lastpass-root=""></div>
+<script type="text/javascript" src="js/doc-hub-custom-javascript.js"></script>
 </body>
 </html>
