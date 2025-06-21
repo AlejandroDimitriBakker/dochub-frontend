@@ -1,3 +1,4 @@
+/* FONTS STYLES */
 @font-face {
     font-family: 'OTTO Sans';
     src: url('../fonts/OTTOSans-Regular.woff2') format('woff2'),
@@ -15,6 +16,7 @@
 }
 
 
+/* ALL STYLES */
 * {
     box-sizing: border-box;
 }
@@ -22,6 +24,13 @@
 html {
     height: 100vh;
 }
+
+:root {
+    --bs-link-color: #dc001d;
+    --bs-link-hover-color: #dc001d;
+    --dt-row-selected: #90e5d5 !important;
+}
+
 
 /* BLOCK STYLES */
 body {
@@ -46,6 +55,8 @@ body {
     background-color: #f0f0f0;
 }
 
+
+/* HEADER STYLES */
 .doc-hub-login-header {
     display: flex;
     width: 100%;
@@ -75,7 +86,6 @@ body {
     font-weight: 800;
     text-align: center;
 }
-
 
 .doc-hub-login-header-title-div {
     margin: auto;
@@ -110,6 +120,8 @@ body {
     font-size: 0.9rem;
 }
 
+
+/* CONTENT STYLES */
 .doc-hub-content {
     height: 100%;
     width: 100%;
@@ -120,12 +132,16 @@ body {
     margin: 15px auto;
 }
 
+
+/* FOOTER STYLES */
 .doc-hub-footer {
     text-align: center;
     margin: 10px 0 0 0;
     padding: 5px;
 }
 
+
+/* MENU STYLES */
 .doc-hub-navbar {
     display: flex;
     height: auto;
@@ -160,6 +176,8 @@ body {
     text-decoration: underline;
 }
 
+
+/* CONTENT DIVS STYLES */
 .doc-hub-main-content {
     float: left;
     margin-left: 25px;
@@ -197,6 +215,11 @@ h3 {
 h4 {
     font-size: 1.25rem;
     color: #dc001d;
+}
+
+p {
+    font-size: 0.90rem;
+    line-height: 1.4;
 }
 
 p {
@@ -282,6 +305,8 @@ small {
 }
 
 .doc-hub-year-umsatzjahr {
+    min-width: 5.5rem !important;
+    width: 5.5rem;
     max-width: 5.5rem;
 }
 
@@ -306,6 +331,7 @@ small {
     width: 14rem;
     font-size: 0.90rem;
 }
+
 
 /* MODAL */
 .doc-hub-erstmeldung-modal-wrapper, .doc-hub-korrekturmeldung-modal-wrapper {
@@ -360,15 +386,8 @@ div.dt-container.dt-empty-footer tbody > tr:last-child > * {
     border-bottom: 1px solid #030303 !important;
 }
 
-
 table.dataTable tbody tr.selected {
     background-color: #90e5d5 !important;
-}
-
-:root {
-    --bs-link-color: #dc001d;
-    --bs-link-hover-color: #dc001d;
-    --dt-row-selected: #90e5d5 !important;
 }
 
 input[type="checkbox"] {
@@ -402,20 +421,11 @@ input[type="checkbox"] {
     max-width: 15rem;
 }
 
+
 /* RESPONSIVE MEDIA [1440px laptop, 768px tablet, mobile 390px] */
 @media only screen and (max-width: 768px) {
     /* For mobile tablets: */
-    .doc-hub-main-content {
-        width: 100%;
-        margin-left: 5px;
-    }
-
-    .doc-hub-nav-link {
-        font-size: 1.1rem;
-        color: #777777;
-        padding: 5px 8px;
-    }
-
+    /* HEADER STYLES */
     .doc-hub-header {
         margin-bottom: 15px;
         padding: 15px 0 15px 0;
@@ -455,6 +465,30 @@ input[type="checkbox"] {
 
     .doc-hub-user-profile-username {
         font-size: 0.9rem;
+    }
+
+
+    /* MENU STYLES */
+    .doc-hub-navbar {
+        padding: 5px 0 5px 15px;
+    }
+
+    .doc-hub-nav-link {
+        font-size: 1.1rem;
+        color: #777777;
+        padding: 5px 8px;
+    }
+
+
+    /* TEXT STYLES */
+    p {
+        font-size: 1.0rem;
+    }
+
+    /* CONTENT DIVS STYLES */
+    .doc-hub-main-content {
+        width: 100%;
+        margin-left: 5px;
     }
 
 }
