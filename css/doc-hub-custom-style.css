@@ -82,11 +82,17 @@ body {
 }
 
 .doc-hub-header-title-div {
+    float: left;
     padding-left: 35px;
     margin: auto 0;
+    text-align: left;
 }
 
-.doc-hub-user-profile-container {
+.doc-hub-header-icons-div {
+    float: right;
+}
+
+.doc-hub-user-profile-container, .doc-hub-user-logout-container {
     float: right;
     display: flex;
     flex-direction: column;
@@ -120,7 +126,7 @@ body {
     padding: 5px;
 }
 
-.doc-hub-nav-bar {
+.doc-hub-navbar {
     display: flex;
     height: auto;
     justify-content: start;
@@ -157,13 +163,9 @@ body {
 .doc-hub-main-content {
     float: left;
     margin-left: 25px;
-    padding: 10px;
-    max-width: 95%;
-}
-
-.doc-hub-main-content {
     margin-top: 10px;
-    max-width: 50%;
+    padding: 10px;
+    width: 50%;
 }
 
 .doc-hub-section {
@@ -309,10 +311,12 @@ small {
 .doc-hub-erstmeldung-modal-wrapper, .doc-hub-korrekturmeldung-modal-wrapper {
     width: 550px;
     max-width: 90%;
+    overflow: auto;
 }
 
 .doc-hub-modal-datatable-wrapper {
     max-width: 100%;
+    overflow: auto;
 }
 
 
@@ -398,23 +402,72 @@ input[type="checkbox"] {
     max-width: 15rem;
 }
 
-/* RESPONSIVE MEDIA */
-@media only screen and (max-width: 620px) {
-    /* For mobile phones: */
-    .menu, .doc-hub-main-content {
+/* RESPONSIVE MEDIA [1440px laptop, 768px tablet, mobile 390px] */
+@media only screen and (max-width: 768px) {
+    /* For mobile tablets: */
+    .doc-hub-main-content {
         width: 100%;
+        margin-left: 5px;
+    }
+
+    .doc-hub-nav-link {
+        font-size: 1.1rem;
+        color: #777777;
+        padding: 5px 8px;
+    }
+
+    .doc-hub-header {
+        margin-bottom: 15px;
+        padding: 15px 0 15px 0;
+        background-color: #dc001d;
+        color: white;
+        text-align: left;
     }
 
     .doc-hub-header-title-div {
-        font-size: 1.5rem;
+        width: 100%;
+        font-size: 1.7rem;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+
+    .doc-hub-header-icons-div {
+        float: right;
+    }
+
+    .doc-hub-user-profile-container {
+        float: left;
+        margin-left: 15px;
+    }
+
+    .doc-hub-user-logout-container {
+        float: right;
+        margin-right: 15px;
+    }
+
+    .doc-hub-header-icons-div {
+        width: 100%;
     }
 
     .doc-hub-user-profile-icon {
-        height: 1.5rem;
+        height: 1.7rem;
     }
 
     .doc-hub-user-profile-username {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
 }
+
+
+@media only screen and (max-width: 390px) {
+    /* For mobile phones: */
+    /* For mobile tablets: */
+    .doc-hub-main-content {
+        width: 100%;
+        margin-left: 3px;
+    }
+
+}
+
+
