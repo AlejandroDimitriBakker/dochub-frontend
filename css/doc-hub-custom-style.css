@@ -268,6 +268,10 @@ small {
     margin-left: 15px;
 }
 
+.doc-hub-btn-dashboard {
+    margin: 0 0 0 25px;
+}
+
 .form-check-input {
     box-shadow: 0 0 0 rgba(220, 0, 29, 0.75) !important;
     border-color: #dc001d;
@@ -485,6 +489,10 @@ input[type="checkbox"] {
         font-size: 1.1rem;
     }
 
+    h3 {
+        font-size: 1.4rem;
+    }
+
     /* CONTENT DIVS STYLES */
     .doc-hub-main-content {
         width: 100%;
@@ -497,10 +505,27 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 390px) {
     /* For mobile phones: */
+    /* TEXT STYLES */
+    h3 {
+        font-size: 1.2rem;
+    }
+
     /* CONTENT DIVS STYLES */
     .doc-hub-main-content {
         width: 100%;
         margin-left: 3px;
+    }
+
+    /* FORM STYLES */
+    .doc-hub-btn-dashboard {
+        margin: 20px 0 0 0;
+    }
+
+    /* CHART JS */
+    .doc-hub-form-pie-chart {
+        width: 500px;
+        margin: auto -40%;
+        padding: 25px 0;
     }
 
 }
