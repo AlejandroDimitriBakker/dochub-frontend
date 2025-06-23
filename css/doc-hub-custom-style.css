@@ -470,7 +470,7 @@ input[type="checkbox"] {
 
     /* MENU STYLES */
     .doc-hub-navbar {
-        padding: 5px 0 5px 15px;
+        padding: 5px 0 5px 5px;
     }
 
     .doc-hub-nav-link {
@@ -482,12 +482,13 @@ input[type="checkbox"] {
 
     /* TEXT STYLES */
     p {
-        font-size: 1.0rem;
+        font-size: 1.1rem;
     }
 
     /* CONTENT DIVS STYLES */
     .doc-hub-main-content {
         width: 100%;
+        margin-left: 5px;
         margin-left: 5px;
     }
 
@@ -496,7 +497,7 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 390px) {
     /* For mobile phones: */
-    /* For mobile tablets: */
+    /* CONTENT DIVS STYLES */
     .doc-hub-main-content {
         width: 100%;
         margin-left: 3px;
