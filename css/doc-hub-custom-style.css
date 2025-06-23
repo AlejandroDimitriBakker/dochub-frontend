@@ -299,6 +299,14 @@ small {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(180, 179, 219, 1)'/></svg>");
 }
 
+.doc-hub-login-form-div-check {
+    margin-left: 8px !important;
+}
+
+.doc-hub-login-form-div-check-input {
+    margin-left: 10px !important;
+}
+
 .form-control:focus, .dt-input:focus, .dt-input:focus-visible, div.dt-container .dt-search input:focus, div.dt-container .dt-search input:focus-visible {
     border: 2px solid #030303 !important;
     box-shadow: none !important;
@@ -517,6 +525,12 @@ input[type="checkbox"] {
 
     .btn, .btn-primary {
         margin: 10px 10px 10px 0;
+    }
+
+    /* PAGES STYLES */
+    .login {
+        width: 70%;
+        max-width: 90%;
     }
 
 }
