@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="row">
-    <div class="d-flex justify-content-center mx-auto col-md-9">
+    <div class="d-flex justify-content-center mx-auto">
         <div class="doc-hub-page-container">
             <div class="row doc-hub-header">
                 <div class="align-items-center justify-content-between">
@@ -69,159 +69,157 @@
                 </nav>
             </div>
             <div class="doc-hub-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="doc-hub-main-content">
-                            <div>
-                                <div class="col-md-12">
-                                    <form action="erstmeldung.html">
-                                        <div class="form-group doc-hub-form-group">
-                                            <label for="umsatzjahr">Umsatzjahr</label>
-                                            <div class="input-group">
-                                                <input id="umsatzjahr" name="umsatzjahr" type="number"
-                                                       class="form-control doc-hub-year-umsatzjahr" placeholder="YYYY" min="2015" max="2040"
-                                                       step="1" autofocus>
-                                                <img src="icons/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
-                                            </div>
+                <div class="row">
+                    <div class="doc-hub-main-content">
+                        <div>
+                            <div class="col-12">
+                                <form action="erstmeldung.html">
+                                    <div class="form-group doc-hub-form-group">
+                                        <label for="umsatzjahr">Umsatzjahr</label>
+                                        <div class="input-group">
+                                            <input id="umsatzjahr" name="umsatzjahr" type="number"
+                                                   class="form-control doc-hub-year-umsatzjahr" placeholder="YYYY" min="2015" max="2040"
+                                                   step="1" autofocus>
+                                            <img src="icons/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
                                         </div>
-                                        <div class="form-group doc-hub-form-group">
-                                            <label for="stammdaten">Datum der Stammdaten</label>
-                                            <input id="stammdaten" name="stammdaten" type="date"
-                                                   class="form-control form-select doc-hub-stammdaten" aria-label="Umsatzjahr">
+                                    </div>
+                                    <div class="form-group doc-hub-form-group">
+                                        <label for="stammdaten">Datum der Stammdaten</label>
+                                        <input id="stammdaten" name="stammdaten" type="date"
+                                               class="form-control form-select doc-hub-stammdaten" aria-label="Umsatzjahr">
+                                    </div>
+                                    <div class="form-group doc-hub-form-group">
+                                        <label for="meldung-aller-partner"></label>
+                                        <div class="form-check">
+                                            <input id="meldung-aller-partner" name="meldung-aller-partner" class="form-check-input"
+                                                   type="checkbox" value="aller">
+                                            <label class="form-check-label" for="meldung-aller-partner">
+                                                Meldung aller Partner
+                                            </label>
                                         </div>
-                                        <div class="form-group doc-hub-form-group">
-                                            <label for="meldung-aller-partner"></label>
-                                            <div class="form-check">
-                                                <input id="meldung-aller-partner" name="meldung-aller-partner" class="form-check-input"
-                                                       type="checkbox" value="aller">
-                                                <label class="form-check-label" for="meldung-aller-partner">
-                                                    Meldung aller Partner
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input id="meldung-bestimmter-partner" name="meldung-bestimmter-partner"
-                                                       class="form-check-input" type="checkbox" value="bestimmter" checked="checked">
-                                                <label class="form-check-label" for="meldung-bestimmter-partner">
-                                                    Meldung bestimmter Partner
-                                                </label>
-                                                <div>
-                                                    <label for="partners" class="form-label"></label>
-                                                    <textarea id="partners" name="partners" class="form-control doc-hub-textarea-partners"
-                                                              rows="7">08154711
+                                        <div class="form-check">
+                                            <input id="meldung-bestimmter-partner" name="meldung-bestimmter-partner"
+                                                   class="form-check-input" type="checkbox" value="bestimmter" checked="checked">
+                                            <label class="form-check-label" for="meldung-bestimmter-partner">
+                                                Meldung bestimmter Partner
+                                            </label>
+                                            <div>
+                                                <label for="partners" class="form-label"></label>
+                                                <textarea id="partners" name="partners" class="form-control doc-hub-textarea-partners"
+                                                          rows="7">08154711
 47111234
 12121341
                         </textarea>
 
-                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group doc-hub-form-group">
-                                            <!-- Button trigger modal -->
-                                            <input type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                   data-bs-target="#doc-hub-erstmeldung-modal" value="Validierungs-Live-Test">
-                                            <input type="reset" class="btn btn-secondary btn-reset" value="Sauber">
-                                            <div id="doc-hub-erstmeldung-modal" class="modal fade doc-hub-erstmeldung-modal" tabindex="-1"
-                                                 aria-labelledby="doc-hub-erstmeldung-modal-header" style="display: none;"
-                                                 aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered doc-hub-erstmeldung-modal-wrapper">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="doc-hub-erstmeldung-modal-header">Ergebnisse
-                                                                des Live-Tests</h1>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                    aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Die Live-Validierung der Daten am BZST-Server hat folgende Ergebnisse gebracht
-                                                            <div class="dt-container doc-hub-modal-datatable-wrapper">
-                                                                <div id="doc-hub-erstmeldung-datatable_wrapper"
-                                                                     class="dt-container dt-empty-footer">
-                                                                    <div class="dt-layout-row dt-layout-table">
-                                                                        <div class="dt-layout-cell  dt-layout-full">
-                                                                            <table id="doc-hub-erstmeldung-datatable"
-                                                                                   class="display doc-hub-datatable dataTable"
-                                                                                   style="width: 100%;">
-                                                                                <colgroup>
-                                                                                    <col data-dt-column="0" style="width: 0;">
-                                                                                    <col data-dt-column="1" style="width: 0;">
-                                                                                    <col data-dt-column="2" style="width: 0;">
-                                                                                </colgroup>
-                                                                                <thead>
-                                                                                <tr>
-                                                                                    <th data-dt-column="0"
-                                                                                        class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric dt-orderable-asc dt-orderable-desc dt-ordering-asc"
-                                                                                        rowspan="1" colspan="1" aria-sort="ascending">
-                                                                                        <div class="dt-column-header"><span
-                                                                                                class="dt-column-title">Partner</span><span
-                                                                                                class="dt-column-order" role="button"
-                                                                                                aria-label="Partner: Activate to invert sorting"
-                                                                                                tabindex="0"></span></div>
-                                                                                    </th>
-                                                                                    <th data-dt-column="1"
-                                                                                        class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric dt-orderable-asc dt-orderable-desc"
-                                                                                        rowspan="1" colspan="1">
-                                                                                        <div class="dt-column-header"><span
-                                                                                                class="dt-column-title">FehlerCode</span><span
-                                                                                                class="dt-column-order" role="button"
-                                                                                                aria-label="FehlerCode: Activate to sort"
-                                                                                                tabindex="0"></span></div>
-                                                                                    </th>
-                                                                                    <th data-dt-column="2"
-                                                                                        class="dt-header-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc"
-                                                                                        rowspan="1" colspan="1">
-                                                                                        <div class="dt-column-header"><span
-                                                                                                class="dt-column-title">Bedeutung</span><span
-                                                                                                class="dt-column-order" role="button"
-                                                                                                aria-label="Bedeutung: Activate to sort"
-                                                                                                tabindex="0"></span></div>
-                                                                                    </th>
-                                                                                </tr>
-                                                                                </thead>
-                                                                                <tbody>
-                                                                                <tr>
-                                                                                    <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric sorting_1">
-                                                                                        08154711
-                                                                                    </td>
-                                                                                    <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
-                                                                                        0038
-                                                                                    </td>
-                                                                                    <td class="dt-header-left dt-body-left doc-hub-datable-header-left">
-                                                                                        Steuer-Länder-Code falsch
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric sorting_1">
-                                                                                        47110815
-                                                                                    </td>
-                                                                                    <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
-                                                                                        0041
-                                                                                    </td>
-                                                                                    <td class="dt-header-left dt-body-left doc-hub-datable-header-left">
-                                                                                        Nachname darf nicht leer sein
-                                                                                    </td>
-                                                                                </tr>
-                                                                                </tbody>
-                                                                                <tfoot></tfoot>
-                                                                            </table>
-                                                                        </div>
+                                    </div>
+                                    <div class="form-group doc-hub-form-group">
+                                        <!-- Button trigger modal -->
+                                        <input type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                               data-bs-target="#doc-hub-erstmeldung-modal" value="Validierungs-Live-Test">
+                                        <input type="reset" class="btn btn-secondary btn-reset" value="Sauber">
+                                        <div id="doc-hub-erstmeldung-modal" class="modal fade doc-hub-erstmeldung-modal" tabindex="-1"
+                                             aria-labelledby="doc-hub-erstmeldung-modal-header" style="display: none;"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered doc-hub-erstmeldung-modal-wrapper">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="doc-hub-erstmeldung-modal-header">Ergebnisse
+                                                            des Live-Tests</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Die Live-Validierung der Daten am BZST-Server hat folgende Ergebnisse gebracht
+                                                        <div class="dt-container doc-hub-modal-datatable-wrapper">
+                                                            <div id="doc-hub-erstmeldung-datatable_wrapper"
+                                                                 class="dt-container dt-empty-footer">
+                                                                <div class="dt-layout-row dt-layout-table">
+                                                                    <div class="dt-layout-cell  dt-layout-full">
+                                                                        <table id="doc-hub-erstmeldung-datatable"
+                                                                               class="display doc-hub-datatable dataTable"
+                                                                               style="width: 100%;">
+                                                                            <colgroup>
+                                                                                <col data-dt-column="0" style="width: 0;">
+                                                                                <col data-dt-column="1" style="width: 0;">
+                                                                                <col data-dt-column="2" style="width: 0;">
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th data-dt-column="0"
+                                                                                    class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric dt-orderable-asc dt-orderable-desc dt-ordering-asc"
+                                                                                    rowspan="1" colspan="1" aria-sort="ascending">
+                                                                                    <div class="dt-column-header"><span
+                                                                                            class="dt-column-title">Partner</span><span
+                                                                                            class="dt-column-order" role="button"
+                                                                                            aria-label="Partner: Activate to invert sorting"
+                                                                                            tabindex="0"></span></div>
+                                                                                </th>
+                                                                                <th data-dt-column="1"
+                                                                                    class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric dt-orderable-asc dt-orderable-desc"
+                                                                                    rowspan="1" colspan="1">
+                                                                                    <div class="dt-column-header"><span
+                                                                                            class="dt-column-title">FehlerCode</span><span
+                                                                                            class="dt-column-order" role="button"
+                                                                                            aria-label="FehlerCode: Activate to sort"
+                                                                                            tabindex="0"></span></div>
+                                                                                </th>
+                                                                                <th data-dt-column="2"
+                                                                                    class="dt-header-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc"
+                                                                                    rowspan="1" colspan="1">
+                                                                                    <div class="dt-column-header"><span
+                                                                                            class="dt-column-title">Bedeutung</span><span
+                                                                                            class="dt-column-order" role="button"
+                                                                                            aria-label="Bedeutung: Activate to sort"
+                                                                                            tabindex="0"></span></div>
+                                                                                </th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric sorting_1">
+                                                                                    08154711
+                                                                                </td>
+                                                                                <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
+                                                                                    0038
+                                                                                </td>
+                                                                                <td class="dt-header-left dt-body-left doc-hub-datable-header-left">
+                                                                                    Steuer-Länder-Code falsch
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric sorting_1">
+                                                                                    47110815
+                                                                                </td>
+                                                                                <td class="dt-header-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
+                                                                                    0041
+                                                                                </td>
+                                                                                <td class="dt-header-left dt-body-left doc-hub-datable-header-left">
+                                                                                    Nachname darf nicht leer sein
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                            <tfoot></tfoot>
+                                                                        </table>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                                Zurück
-                                                            </button>
-                                                            <button type="button" class="btn btn-primary">Produktive Meldung im
-                                                                BZST-Server
-                                                            </button>
-                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                            Zurück
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary">Produktive Meldung im
+                                                            BZST-Server
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="row">
-    <div class="d-flex justify-content-center mx-auto col-md-9">
+    <div class="d-flex justify-content-center mx-auto">
         <div class="doc-hub-page-container">
             <div class="row doc-hub-header">
                 <div class="align-items-center justify-content-between">
@@ -71,95 +71,94 @@
                 </nav>
             </div>
             <div class="doc-hub-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="doc-hub-main-content">
-                            <div>
-                                <div class="col-md-12">
-                                    <form action="dashboard.html" method="get">
-                                        <div class="form-group doc-hub-form-group">
-                                            <label for="umsatzjahr">Umsatzjahr</label>
-                                            <div class="input-group">
-                                                <div class="doc-hub-div-dashboard-umsatzjahr">
-                                                    <input id="umsatzjahr" name="umsatzjahr" type="number"
-                                                           class="form-control doc-hub-year-umsatzjahr" placeholder="YYYY" min="2015"
-                                                           max="2040"
-                                                           step="1" autofocus>
-                                                </div>
-                                                <div class="doc-hub-div-dashboard-umsatzjahr">
-                                                    <img src="icons/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
-                                                </div>
-                                                <div class="doc-hub-div-btn-dashboard">
-                                                    <button type="button" class="btn btn-primary">Suche mit Umsatzjahr
-                                                        verfeinern
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group doc-hub-form-group mt-4">
-                                            <h3>Übermittlungen gesamt: 6500</h3>
-                                        </div>
-                                    </form>
-                                    <div class="doc-hub-form-pie-chart">
-                                        <div class="chartjs-size-monitor">
-                                            <div class="chartjs-size-monitor-expand">
-                                                <div class=""></div>
-                                            </div>
-                                            <div class="chartjs-size-monitor-shrink">
-                                                <div class=""></div>
-                                            </div>
-                                        </div>
-                                        <canvas id="doc-hub-dashboard-pie-chart-1" class="doc-hub-canvas-pie-chart chartjs-render-monitor"
-                                                style="display: block; width: 400px; height: 200px;" width="400" height="200"></canvas>
-                                    </div>
-                                    <div class="doc-hub-form-pie-chart">
-                                        <div class="chartjs-size-monitor">
-                                            <div class="chartjs-size-monitor-expand">
-                                                <div class=""></div>
-                                            </div>
-                                            <div class="chartjs-size-monitor-shrink">
-                                                <div class=""></div>
-                                            </div>
-                                        </div>
-                                        <canvas id="doc-hub-dashboard-pie-chart-2" class="doc-hub-canvas-pie-chart chartjs-render-monitor"
-                                                style="display: block; width: 400px; height: 200px;" width="400" height="200"></canvas>
-                                    </div>
-                                    <script>
-                                        let xValues1 = ["Jur. Personen", "Nat. Personen"];
-                                        let yValues1 = [1231, 4500];
-                                        let xValues2 = ["Jur. Personen", "Nat. Personen"];
-                                        let yValues2 = [1231, 4500];
-                                        let barColors = [
-                                            "#b91d47",
-                                            "#00aba9",
-                                            "#2b5797",
-                                            "#e8c3b9",
-                                            "#1e7145"
-                                        ];
 
-                                        new Chart("doc-hub-dashboard-pie-chart-1", {
-                                            type: "pie",
-                                            data: {
-                                                labels: xValues1,
-                                                datasets: [{
-                                                    backgroundColor: barColors,
-                                                    data: yValues1
-                                                }]
-                                            },
-                                        });
-
-                                        new Chart("doc-hub-dashboard-pie-chart-2", {
-                                            type: "pie",
-                                            data: {
-                                                labels: xValues2,
-                                                datasets: [{
-                                                    backgroundColor: barColors,
-                                                    data: yValues2
-                                                }]
-                                            },
-                                        });
-                                    </script>
+                <div class="row">
+                    <div class="doc-hub-main-content">
+                        <div>
+                            <div class="col-12">
+                                <form action="dashboard.html" method="get">
+                                    <div class="form-group doc-hub-form-group">
+                                        <label for="umsatzjahr">Umsatzjahr</label>
+                                        <div class="input-group">
+                                            <div class="doc-hub-div-dashboard-umsatzjahr">
+                                                <input id="umsatzjahr" name="umsatzjahr" type="number"
+                                                       class="form-control doc-hub-year-umsatzjahr" placeholder="YYYY" min="2015"
+                                                       max="2040"
+                                                       step="1" autofocus>
+                                            </div>
+                                            <div class="doc-hub-div-dashboard-umsatzjahr">
+                                                <img src="icons/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
+                                            </div>
+                                            <div class="doc-hub-div-btn-dashboard">
+                                                <button type="button" class="btn btn-primary">Suche mit Umsatzjahr
+                                                    verfeinern
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group doc-hub-form-group mt-4">
+                                        <h3>Übermittlungen gesamt: 6500</h3>
+                                    </div>
+                                </form>
+                                <div class="doc-hub-form-pie-chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas id="doc-hub-dashboard-pie-chart-1" class="doc-hub-canvas-pie-chart chartjs-render-monitor"
+                                            style="display: block; width: 400px; height: 200px;" width="400" height="200"></canvas>
                                 </div>
+                                <div class="doc-hub-form-pie-chart">
+                                    <div class="chartjs-size-monitor">
+                                        <div class="chartjs-size-monitor-expand">
+                                            <div class=""></div>
+                                        </div>
+                                        <div class="chartjs-size-monitor-shrink">
+                                            <div class=""></div>
+                                        </div>
+                                    </div>
+                                    <canvas id="doc-hub-dashboard-pie-chart-2" class="doc-hub-canvas-pie-chart chartjs-render-monitor"
+                                            style="display: block; width: 400px; height: 200px;" width="400" height="200"></canvas>
+                                </div>
+                                <script>
+                                    let xValues1 = ["Jur. Personen", "Nat. Personen"];
+                                    let yValues1 = [1231, 4500];
+                                    let xValues2 = ["Jur. Personen", "Nat. Personen"];
+                                    let yValues2 = [1231, 4500];
+                                    let barColors = [
+                                        "#b91d47",
+                                        "#00aba9",
+                                        "#2b5797",
+                                        "#e8c3b9",
+                                        "#1e7145"
+                                    ];
+
+                                    new Chart("doc-hub-dashboard-pie-chart-1", {
+                                        type: "pie",
+                                        data: {
+                                            labels: xValues1,
+                                            datasets: [{
+                                                backgroundColor: barColors,
+                                                data: yValues1
+                                            }]
+                                        },
+                                    });
+
+                                    new Chart("doc-hub-dashboard-pie-chart-2", {
+                                        type: "pie",
+                                        data: {
+                                            labels: xValues2,
+                                            datasets: [{
+                                                backgroundColor: barColors,
+                                                data: yValues2
+                                            }]
+                                        },
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>

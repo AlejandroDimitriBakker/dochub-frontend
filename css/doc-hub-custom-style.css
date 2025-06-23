@@ -35,7 +35,6 @@ html {
 /* BLOCK STYLES */
 body {
     position: relative;
-    min-height: 95vh;
     max-width: 100%;
     overflow-x: hidden;
     font-family: "OTTO Sans", Arial, Helvetica, sans-serif;
@@ -45,13 +44,12 @@ body {
 }
 
 .doc-hub-page-container {
+    min-height: 100vh;
+    width: 56%;
     text-align: left;
     overflow-x: hidden;
     display: flex;
-    width: 91%;
     flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
     background-color: #f0f0f0;
 }
 
@@ -128,13 +126,13 @@ body {
     vertical-align: top;
     align-items: center;
     justify-content: center;
-    min-height: 60%;
     margin: 15px auto;
 }
 
 
 /* FOOTER STYLES */
 .doc-hub-footer {
+    width: 100%;
     text-align: center;
     margin: 10px 0 0 0;
     padding: 5px;
@@ -180,8 +178,7 @@ body {
 /* CONTENT DIVS STYLES */
 .doc-hub-main-content {
     float: left;
-    margin-left: 25px;
-    margin-top: 10px;
+    margin-left: 37px;
     padding: 10px;
     width: 56%;
 }
@@ -440,9 +437,123 @@ input[type="checkbox"] {
 }
 
 
-/* RESPONSIVE MEDIA [1440px laptop, 768px tablet, mobile 390px] */
+/* RESPONSIVE MEDIA [1440px big screen, 1200px desktop, 768px tablet, mobile 390px] */
+@media only screen and (max-width: 1200px) {
+    /* For mobile desktops: */
+    /* CONTENT DIVS STYLES */
+    .doc-hub-page-container {
+        width: 70%;
+    }
+
+    .doc-hub-main-content {
+        width: 77%;
+    }
+
+    /* PAGES STYLES */
+    .login {
+        width: 50%;
+        max-width: 90%;
+    }
+
+}
+
+
 @media only screen and (max-width: 768px) {
     /* For mobile tablets: */
+    /* CONTENT DIVS STYLES */
+    .doc-hub-page-container {
+        width: 84%;
+    }
+
+    /* HEADER STYLES */
+    .doc-hub-header {
+        margin-bottom: 15px;
+        padding: 15px 0 15px 0;
+        background-color: #dc001d;
+        color: white;
+        text-align: left;
+    }
+
+    .doc-hub-header-title-div {
+        width: 100%;
+        font-size: 1.7rem;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+
+    .doc-hub-header-icons-div {
+        float: right;
+    }
+
+    .doc-hub-user-profile-container {
+        float: left;
+        margin-left: 15px;
+    }
+
+    .doc-hub-user-logout-container {
+        float: right;
+        margin-right: 15px;
+    }
+
+    .doc-hub-header-icons-div {
+        width: 100%;
+    }
+
+    .doc-hub-user-profile-icon {
+        height: 1.7rem;
+    }
+
+    .doc-hub-user-profile-username {
+        font-size: 0.9rem;
+    }
+
+    /* MENU STYLES */
+    .doc-hub-navbar {
+        padding: 5px 0 5px 5px;
+    }
+
+    .doc-hub-nav-link {
+        font-size: 1.1rem;
+        color: #777777;
+        padding: 5px 8px;
+    }
+
+    /* TEXT STYLES */
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    /* FORM STYLES */
+    .doc-hub-div-dashboard-umsatzjahr {
+        float: left;
+        margin: auto 0;
+    }
+
+    .doc-hub-div-btn-dashboard {
+        float: left;
+        margin: 15px 0 !important;
+    }
+
+    .btn, .btn-primary {
+        margin: 10px 10px 10px 0;
+    }
+
+    /* PAGES STYLES */
+    .login {
+        width: 70%;
+        max-width: 90%;
+    }
+
+}
+
+
+@media only screen and (max-width: 390px) {
+    /* For mobile phones: */
+    /* CONTENT DIVS STYLES */
+    .doc-hub-page-container {
+        width: 95%;
+    }
+
     /* HEADER STYLES */
     .doc-hub-header {
         margin-bottom: 15px;
@@ -498,9 +609,8 @@ input[type="checkbox"] {
 
     /* CONTENT DIVS STYLES */
     .doc-hub-main-content {
-        width: 100%;
-        margin-left: 5px;
-        margin-left: 5px;
+        width: 94%;
+        margin-left: 3px;
     }
 
     /* TEXT STYLES */
@@ -508,43 +618,6 @@ input[type="checkbox"] {
         font-size: 1.1rem;
     }
 
-    h3 {
-        font-size: 1.4rem;
-    }
-
-    /* FORM STYLES */
-    .doc-hub-div-dashboard-umsatzjahr {
-        float: left;
-        margin: auto 0;
-    }
-
-    .doc-hub-div-btn-dashboard {
-        float: left;
-        margin: 15px 0 !important;
-    }
-
-    .btn, .btn-primary {
-        margin: 10px 10px 10px 0;
-    }
-
-    /* PAGES STYLES */
-    .login {
-        width: 70%;
-        max-width: 90%;
-    }
-
-}
-
-
-@media only screen and (max-width: 390px) {
-    /* For mobile phones: */
-    /* CONTENT DIVS STYLES */
-    .doc-hub-main-content {
-        width: 100%;
-        margin-left: 3px;
-    }
-
-    /* TEXT STYLES */
     h3 {
         font-size: 1.2rem;
     }
