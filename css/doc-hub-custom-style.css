@@ -515,6 +515,10 @@ input[type="checkbox"] {
         margin: 15px 0 !important;
     }
 
+    .btn, .btn-primary {
+        margin: 10px 10px 10px 0;
+    }
+
 }
 
 
@@ -542,10 +546,15 @@ input[type="checkbox"] {
         margin: 15px 0 !important;
     }
 
+    .btn, .btn-primary {
+        margin: 10px 10px 10px 0;
+    }
+
+
     /* CHART JS */
     .doc-hub-form-pie-chart {
         width: 500px;
-        margin: auto -40%;
+        margin: auto -45%;
         padding: 25px 0;
     }
 
