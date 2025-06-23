@@ -183,7 +183,7 @@ body {
     margin-left: 25px;
     margin-top: 10px;
     padding: 10px;
-    width: 50%;
+    width: 56%;
 }
 
 .doc-hub-section {
@@ -268,8 +268,14 @@ small {
     margin-left: 15px;
 }
 
-.doc-hub-btn-dashboard {
-    margin: 0 0 0 25px;
+.doc-hub-div-dashboard-umsatzjahr {
+    float: left;
+    margin: auto 0;
+}
+
+.doc-hub-div-btn-dashboard {
+    float: left;
+    margin: 10px 20px !important;
 }
 
 .form-check-input {
@@ -471,7 +477,6 @@ input[type="checkbox"] {
         font-size: 0.9rem;
     }
 
-
     /* MENU STYLES */
     .doc-hub-navbar {
         padding: 5px 0 5px 5px;
@@ -483,6 +488,12 @@ input[type="checkbox"] {
         padding: 5px 8px;
     }
 
+    /* CONTENT DIVS STYLES */
+    .doc-hub-main-content {
+        width: 100%;
+        margin-left: 5px;
+        margin-left: 5px;
+    }
 
     /* TEXT STYLES */
     p {
@@ -493,11 +504,15 @@ input[type="checkbox"] {
         font-size: 1.4rem;
     }
 
-    /* CONTENT DIVS STYLES */
-    .doc-hub-main-content {
-        width: 100%;
-        margin-left: 5px;
-        margin-left: 5px;
+    /* FORM STYLES */
+    .doc-hub-div-dashboard-umsatzjahr {
+        float: left;
+        margin: auto 0;
+    }
+
+    .doc-hub-div-btn-dashboard {
+        float: left;
+        margin: 15px 0 !important;
     }
 
 }
@@ -505,20 +520,26 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 390px) {
     /* For mobile phones: */
-    /* TEXT STYLES */
-    h3 {
-        font-size: 1.2rem;
-    }
-
     /* CONTENT DIVS STYLES */
     .doc-hub-main-content {
         width: 100%;
         margin-left: 3px;
     }
 
+    /* TEXT STYLES */
+    h3 {
+        font-size: 1.2rem;
+    }
+
     /* FORM STYLES */
-    .doc-hub-btn-dashboard {
-        margin: 20px 0 0 0;
+    .doc-hub-div-dashboard-umsatzjahr {
+        float: left;
+        margin: auto 0;
+    }
+
+    .doc-hub-div-btn-dashboard {
+        float: left;
+        margin: 15px 0 !important;
     }
 
     /* CHART JS */
