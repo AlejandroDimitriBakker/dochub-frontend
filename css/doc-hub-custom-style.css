@@ -445,6 +445,7 @@ input[type="checkbox"] {
 
     .doc-hub-main-content {
         width: 77%;
+        margin-left: 15px;
     }
 
     /* PAGES STYLES */
@@ -566,7 +567,6 @@ input[type="checkbox"] {
     /* CONTENT DIVS STYLES */
     .doc-hub-main-content {
         width: 94%;
-        margin-left: 3px;
     }
 
     /* TEXT STYLES */
@@ -592,7 +592,6 @@ input[type="checkbox"] {
     .btn, .btn-primary {
         margin: 10px 10px 10px 0;
     }
-
 
     /* CHART JS */
     .doc-hub-form-pie-chart {
