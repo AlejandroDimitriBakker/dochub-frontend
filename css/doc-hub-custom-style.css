@@ -124,8 +124,6 @@ body {
     height: 100%;
     width: 100%;
     vertical-align: top;
-    align-items: center;
-    justify-content: center;
     margin: 15px auto;
 }
 
@@ -552,48 +550,6 @@ input[type="checkbox"] {
     /* CONTENT DIVS STYLES */
     .doc-hub-page-container {
         width: 95%;
-    }
-
-    /* HEADER STYLES */
-    .doc-hub-header {
-        margin-bottom: 15px;
-        padding: 15px 0 15px 0;
-        background-color: #dc001d;
-        color: white;
-        text-align: left;
-    }
-
-    .doc-hub-header-title-div {
-        width: 100%;
-        font-size: 1.7rem;
-        padding-top: 15px;
-        padding-left: 15px;
-    }
-
-    .doc-hub-header-icons-div {
-        float: right;
-    }
-
-    .doc-hub-user-profile-container {
-        float: left;
-        margin-left: 15px;
-    }
-
-    .doc-hub-user-logout-container {
-        float: right;
-        margin-right: 15px;
-    }
-
-    .doc-hub-header-icons-div {
-        width: 100%;
-    }
-
-    .doc-hub-user-profile-icon {
-        height: 1.7rem;
-    }
-
-    .doc-hub-user-profile-username {
-        font-size: 0.9rem;
     }
 
     /* MENU STYLES */

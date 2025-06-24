@@ -69,256 +69,251 @@
                 </nav>
             </div>
             <div class="doc-hub-content">
-
                 <div class="row">
-                    <div class="doc-hub-main-content">
-                        <div>
-                            <div class="col-12">
-                                <form action="korrekturmeldung.html">
-                                    <div class="form-group doc-hub-form-group">
-                                        <label for="umsatzjahr">Umsatzjahr</label>
-                                        <div class="input-group">
-                                            <input id="umsatzjahr" name="umsatzjahr" type="number"
-                                                   class="form-control doc-hub-year-umsatzjahr" placeholder="YYYY" min="2015" max="2040"
-                                                   step="1" autofocus>
-                                            <img src="icons/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
-                                        </div>
-                                    </div>
-                                    <div class="form-group doc-hub-form-group">
-                                        <button type="button" class="btn btn-primary">Suche mit Umsatzjahr verfeinern</button>
-                                    </div>
-                                    <div class="form-group doc-hub-form-group">
-                                        <div class="dt-container doc-hub-modal-datatable-wrapper">
-                                            <div id="doc-hub-korrekturmeldung-datatable_wrapper" class="dt-container dt-empty-footer">
-                                                <div class="dt-layout-row dt-layout-table">
-                                                    <div class="dt-layout-cell  dt-layout-full">
-                                                        <table id="doc-hub-korrekturmeldung-datatable"
-                                                               class="display doc-hub-datatable dataTable">
-                                                            <colgroup>
-                                                                <col data-dt-column="0">
-                                                                <col data-dt-column="1">
-                                                                <col data-dt-column="2">
-                                                            </colgroup>
-                                                            <thead>
-                                                            <tr>
-                                                                <th data-dt-column="0"
-                                                                    class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc dt-ordering-asc"
-                                                                    rowspan="1" colspan="1" aria-sort="ascending">
-                                                                    <div class="dt-column-header"><span
-                                                                            class="dt-column-title">Reference-ID</span><span
-                                                                            class="dt-column-order" role="button"
-                                                                            aria-label="Reference-ID: Activate to invert sorting"
-                                                                            tabindex="0"></span></div>
-                                                                </th>
-                                                                <th data-dt-column="1"
-                                                                    class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc"
-                                                                    rowspan="1" colspan="1">
-                                                                    <div class="dt-column-header"><span
-                                                                            class="dt-column-title">Datum</span><span
-                                                                            class="dt-column-order" role="button"
-                                                                            aria-label="Datum: Activate to sort" tabindex="0"></span>
-                                                                    </div>
-                                                                </th>
-                                                                <th data-dt-column="2"
-                                                                    class="dt-head-center dt-body-center dt-orderable-asc dt-orderable-desc"
-                                                                    rowspan="1" colspan="1">
-                                                                    <div class="dt-column-header"><span
-                                                                            class="dt-column-title">Auswahl</span><span
-                                                                            class="dt-column-order" role="button"
-                                                                            aria-label="Auswahl: Activate to sort" tabindex="0"></span>
-                                                                    </div>
-                                                                </th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
-                                                                    01-187817-4567
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
-                                                                    20.12.2024
-                                                                </td>
-                                                                <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
-                                                                        type="checkbox"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
-                                                                    12-124521-1242
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
-                                                                    30.01.2024
-                                                                </td>
-                                                                <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
-                                                                        type="checkbox"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
-                                                                    14-121239-7903
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
-                                                                    12.12.2024
-                                                                </td>
-                                                                <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
-                                                                        type="checkbox"></td>
-                                                            </tr>
-                                                            </tbody>
-                                                            <tfoot></tfoot>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group doc-hub-form-group">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#doc-hub-korrekturmeldung-modal">Suche mit
-                                            Reference-ID verfeinern
-                                        </button>
-                                    </div>
-                                    <div class="form-group doc-hub-form-group">
-                                        <div class="dt-container doc-hub-modal-datatable-wrapper">
-                                            <div id="doc-hub-korrekturmeldung-reference-child-datatable_wrapper"
-                                                 class="dt-container dt-empty-footer">
-                                                <div class="dt-layout-row dt-layout-table">
-                                                    <div class="dt-layout-cell  dt-layout-full">
-                                                        <table id="doc-hub-korrekturmeldung-reference-child-datatable"
-                                                               class="display doc-hub-datatable dataTable">
-                                                            <colgroup>
-                                                                <col data-dt-column="0">
-                                                                <col data-dt-column="1">
-                                                                <col data-dt-column="2">
-                                                                <col data-dt-column="3">
-                                                            </colgroup>
-                                                            <thead>
-                                                            <tr>
-                                                                <th data-dt-column="0"
-                                                                    class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc dt-ordering-asc"
-                                                                    rowspan="1" colspan="1" aria-sort="ascending">
-                                                                    <div class="dt-column-header"><span
-                                                                            class="dt-column-title">Reference-ID</span><span
-                                                                            class="dt-column-order" role="button"
-                                                                            aria-label="Reference-ID: Activate to invert sorting"
-                                                                            tabindex="0"></span></div>
-                                                                </th>
-                                                                <th data-dt-column="1"
-                                                                    class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric dt-orderable-asc dt-orderable-desc"
-                                                                    rowspan="1" colspan="1">
-                                                                    <div class="dt-column-header"><span
-                                                                            class="dt-column-title">Partner-ID</span><span
-                                                                            class="dt-column-order" role="button"
-                                                                            aria-label="Partner-ID: Activate to sort"
-                                                                            tabindex="0"></span></div>
-                                                                </th>
-                                                                <th data-dt-column="2"
-                                                                    class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc"
-                                                                    rowspan="1" colspan="1">
-                                                                    <div class="dt-column-header"><span
-                                                                            class="dt-column-title">Datum</span><span
-                                                                            class="dt-column-order" role="button"
-                                                                            aria-label="Datum: Activate to sort" tabindex="0"></span>
-                                                                    </div>
-                                                                </th>
-                                                                <th data-dt-column="3"
-                                                                    class="dt-head-center dt-body-center dt-orderable-asc dt-orderable-desc"
-                                                                    rowspan="1" colspan="1">
-                                                                    <div class="dt-column-header"><span
-                                                                            class="dt-column-title">Auswahl</span><span
-                                                                            class="dt-column-order" role="button"
-                                                                            aria-label="Auswahl: Activate to sort" tabindex="0"></span>
-                                                                    </div>
-                                                                </th>
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
-                                                                    14-121239-7903
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
-                                                                    08154711
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
-                                                                    12.12.2024
-                                                                </td>
-                                                                <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
-                                                                        type="checkbox"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
-                                                                    14-121239-7903
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
-                                                                    47111234
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
-                                                                    12.12.2024
-                                                                </td>
-                                                                <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
-                                                                        type="checkbox"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
-                                                                    14-121239-7903
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
-                                                                    12121341
-                                                                </td>
-                                                                <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
-                                                                    12.12.2024
-                                                                </td>
-                                                                <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
-                                                                        type="checkbox"></td>
-                                                            </tr>
-                                                            </tbody>
-                                                            <tfoot></tfoot>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group doc-hub-form-group">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#doc-hub-korrekturmeldung-modal">Alle
-                                            auswählen
-                                        </button>
-                                    </div>
-                                    <div class="form-group doc-hub-form-group">
-                                        <!-- Button trigger modal -->
-                                        <input type="button" class="btn btn-primary" value="Validierungs-Live-Test">
-                                        <input type="reset" class="btn btn-secondary btn-reset" value="Sauber">
-                                        <div id="doc-hub-korrekturmeldung-modal" class="modal fade doc-hub-korrekturmeldung-modal"
-                                             tabindex="-1" aria-labelledby="doc-hub-korrekturmeldung-modal-header" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered doc-hub-korrekturmeldung-modal-wrapper">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="doc-hub-korrekturmeldung-modal-header">
-                                                            Ergebnisse des Live-Tests</h1>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                                aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Die Live-Validierung der Daten am BZST-Server hat folgende Ergebnisse gebracht
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <img src="icons/check-circle.svg"
-                                                             class="doc-hub-check-circle-icon" alt="OK">Keine Fehler gefunden
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                            Zurück
-                                                        </button>
-                                                        <button type="button" class="btn btn-primary">Produktive Meldung im
-                                                            BZST-Server
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                    <div class="col-12 doc-hub-main-content">
+                        <form action="korrekturmeldung.html">
+                            <div class="form-group doc-hub-form-group">
+                                <label for="umsatzjahr">Umsatzjahr</label>
+                                <div class="input-group">
+                                    <input id="umsatzjahr" name="umsatzjahr" type="number"
+                                           class="form-control doc-hub-year-umsatzjahr" placeholder="YYYY" min="2015" max="2040"
+                                           step="1" autofocus>
+                                    <img src="icons/calendar.svg" class="doc-hub-calendar-icon" alt="Calendar">
+                                </div>
                             </div>
-                        </div>
+                            <div class="form-group doc-hub-form-group">
+                                <button type="button" class="btn btn-primary">Suche mit Umsatzjahr verfeinern</button>
+                            </div>
+                            <div class="form-group doc-hub-form-group">
+                                <div class="dt-container doc-hub-modal-datatable-wrapper">
+                                    <div id="doc-hub-korrekturmeldung-datatable_wrapper" class="dt-container dt-empty-footer">
+                                        <div class="dt-layout-row dt-layout-table">
+                                            <div class="dt-layout-cell  dt-layout-full">
+                                                <table id="doc-hub-korrekturmeldung-datatable"
+                                                       class="display doc-hub-datatable dataTable">
+                                                    <colgroup>
+                                                        <col data-dt-column="0">
+                                                        <col data-dt-column="1">
+                                                        <col data-dt-column="2">
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-dt-column="0"
+                                                            class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc dt-ordering-asc"
+                                                            rowspan="1" colspan="1" aria-sort="ascending">
+                                                            <div class="dt-column-header"><span
+                                                                    class="dt-column-title">Reference-ID</span><span
+                                                                    class="dt-column-order" role="button"
+                                                                    aria-label="Reference-ID: Activate to invert sorting"
+                                                                    tabindex="0"></span></div>
+                                                        </th>
+                                                        <th data-dt-column="1"
+                                                            class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc"
+                                                            rowspan="1" colspan="1">
+                                                            <div class="dt-column-header"><span
+                                                                    class="dt-column-title">Datum</span><span
+                                                                    class="dt-column-order" role="button"
+                                                                    aria-label="Datum: Activate to sort" tabindex="0"></span>
+                                                            </div>
+                                                        </th>
+                                                        <th data-dt-column="2"
+                                                            class="dt-head-center dt-body-center dt-orderable-asc dt-orderable-desc"
+                                                            rowspan="1" colspan="1">
+                                                            <div class="dt-column-header"><span
+                                                                    class="dt-column-title">Auswahl</span><span
+                                                                    class="dt-column-order" role="button"
+                                                                    aria-label="Auswahl: Activate to sort" tabindex="0"></span>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
+                                                            01-187817-4567
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
+                                                            20.12.2024
+                                                        </td>
+                                                        <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
+                                                                type="checkbox"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
+                                                            12-124521-1242
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
+                                                            30.01.2024
+                                                        </td>
+                                                        <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
+                                                                type="checkbox"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
+                                                            14-121239-7903
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
+                                                            12.12.2024
+                                                        </td>
+                                                        <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
+                                                                type="checkbox"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot></tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group doc-hub-form-group">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#doc-hub-korrekturmeldung-modal">Suche mit
+                                    Reference-ID verfeinern
+                                </button>
+                            </div>
+                            <div class="form-group doc-hub-form-group">
+                                <div class="dt-container doc-hub-modal-datatable-wrapper">
+                                    <div id="doc-hub-korrekturmeldung-reference-child-datatable_wrapper"
+                                         class="dt-container dt-empty-footer">
+                                        <div class="dt-layout-row dt-layout-table">
+                                            <div class="dt-layout-cell  dt-layout-full">
+                                                <table id="doc-hub-korrekturmeldung-reference-child-datatable"
+                                                       class="display doc-hub-datatable dataTable">
+                                                    <colgroup>
+                                                        <col data-dt-column="0">
+                                                        <col data-dt-column="1">
+                                                        <col data-dt-column="2">
+                                                        <col data-dt-column="3">
+                                                    </colgroup>
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-dt-column="0"
+                                                            class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc dt-ordering-asc"
+                                                            rowspan="1" colspan="1" aria-sort="ascending">
+                                                            <div class="dt-column-header"><span
+                                                                    class="dt-column-title">Reference-ID</span><span
+                                                                    class="dt-column-order" role="button"
+                                                                    aria-label="Reference-ID: Activate to invert sorting"
+                                                                    tabindex="0"></span></div>
+                                                        </th>
+                                                        <th data-dt-column="1"
+                                                            class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric dt-orderable-asc dt-orderable-desc"
+                                                            rowspan="1" colspan="1">
+                                                            <div class="dt-column-header"><span
+                                                                    class="dt-column-title">Partner-ID</span><span
+                                                                    class="dt-column-order" role="button"
+                                                                    aria-label="Partner-ID: Activate to sort"
+                                                                    tabindex="0"></span></div>
+                                                        </th>
+                                                        <th data-dt-column="2"
+                                                            class="dt-head-left dt-body-left doc-hub-datable-header-left dt-orderable-asc dt-orderable-desc"
+                                                            rowspan="1" colspan="1">
+                                                            <div class="dt-column-header"><span
+                                                                    class="dt-column-title">Datum</span><span
+                                                                    class="dt-column-order" role="button"
+                                                                    aria-label="Datum: Activate to sort" tabindex="0"></span>
+                                                            </div>
+                                                        </th>
+                                                        <th data-dt-column="3"
+                                                            class="dt-head-center dt-body-center dt-orderable-asc dt-orderable-desc"
+                                                            rowspan="1" colspan="1">
+                                                            <div class="dt-column-header"><span
+                                                                    class="dt-column-title">Auswahl</span><span
+                                                                    class="dt-column-order" role="button"
+                                                                    aria-label="Auswahl: Activate to sort" tabindex="0"></span>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
+                                                            14-121239-7903
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
+                                                            08154711
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
+                                                            12.12.2024
+                                                        </td>
+                                                        <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
+                                                                type="checkbox"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
+                                                            14-121239-7903
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
+                                                            47111234
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
+                                                            12.12.2024
+                                                        </td>
+                                                        <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
+                                                                type="checkbox"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left sorting_1">
+                                                            14-121239-7903
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left dt-type-numeric">
+                                                            12121341
+                                                        </td>
+                                                        <td class="dt-head-left dt-body-left doc-hub-datable-header-left">
+                                                            12.12.2024
+                                                        </td>
+                                                        <td class="doc-hub-select-checkbox dt-head-center dt-body-center"><input
+                                                                type="checkbox"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot></tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group doc-hub-form-group">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#doc-hub-korrekturmeldung-modal">Alle
+                                    auswählen
+                                </button>
+                            </div>
+                            <div class="form-group doc-hub-form-group">
+                                <!-- Button trigger modal -->
+                                <input type="button" class="btn btn-primary" value="Validierungs-Live-Test">
+                                <input type="reset" class="btn btn-secondary btn-reset" value="Sauber">
+                                <div id="doc-hub-korrekturmeldung-modal" class="modal fade doc-hub-korrekturmeldung-modal"
+                                     tabindex="-1" aria-labelledby="doc-hub-korrekturmeldung-modal-header" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered doc-hub-korrekturmeldung-modal-wrapper">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="doc-hub-korrekturmeldung-modal-header">
+                                                    Ergebnisse des Live-Tests</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Die Live-Validierung der Daten am BZST-Server hat folgende Ergebnisse gebracht
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="icons/check-circle.svg"
+                                                     class="doc-hub-check-circle-icon" alt="OK">Keine Fehler gefunden
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Zurück
+                                                </button>
+                                                <button type="button" class="btn btn-primary">Produktive Meldung im
+                                                    BZST-Server
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div>
